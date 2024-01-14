@@ -62,7 +62,7 @@ if ( $width < 480 && $height < 480)
     die("480X480 pixelnél kisebb képet nem lehet feltölteni.");
 }
 _________________________________________________________________________________
-//kép maximális 640 cm-es méretének ellenőrzése és jpg fájl elkészítése fájl neve és tartalmának elkészítése
+//kép maximális 640 cm-es jpg fajl
 
 if (imagesx($kep) > 640 && imagesy($kep) > 640){
     $newwidth = 640;
@@ -154,7 +154,7 @@ $pdf ->Write(2, $_SERVER['REMOTE_ADDR']);
 $mentés = "/.SEO/jel_mappa/" . $_POST['jelmunkhely'] . ".pdf";
 $pdf ->Output($mentés, 'F');
 //_______________________________________________________________________________________
-//jelentkező email-en keresztüli értesítés
+// email-en  értesítés
 $to = $_Post['jelmail'];
 $subject = "Sikeres jelentkezés";
 $message = "Köszönjük! \n
